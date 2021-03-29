@@ -1,5 +1,6 @@
 package io.go2zo.tutorial.springbootmustache.config;
 
+import io.go2zo.tutorial.springbootmustache.api.UserAPI;
 import okhttp3.OkHttpClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class RetrofitConfig {
 
-    private static final String BASE_URL = "http://localhost:8080";
+    private static final String BASE_URL = "https://jsonplaceholder.typicode.com/";
 
     @Bean
     public OkHttpClient okHttpClient() {
@@ -24,11 +25,16 @@ public class RetrofitConfig {
 
     @Bean
     public Retrofit retrofit(OkHttpClient client) {
-        String baseURL = BASE_URL + "/api";
+        String baseURL = BASE_URL;
         return new Retrofit.Builder()
                 .baseUrl(baseURL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();
+    }
+
+    @Bean
+    public UserAPI userAPI(Retrofit retrofit) {
+        return retrofit.create(UserAPI.class);
     }
 }

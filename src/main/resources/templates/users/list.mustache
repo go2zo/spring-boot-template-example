@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Mustache template tutorial</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div id="container">
+    <h1>Mustache template tutorial by JSONReplaceholder</h1>
+    <div id="content-pane">
+        <table>
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>username</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>website</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#users}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{username}}</td>
+                <td>{{email}}</td>
+                <td>{{phone}}</td>
+                <td><a href="{{website}}">{{website}}</a></td>
+            </tr>
+            {{/users}}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
