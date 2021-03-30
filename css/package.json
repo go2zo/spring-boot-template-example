@@ -1,0 +1,10 @@
+{
+  "name": "css",
+  "description": "tooling to create a custom Tailwind build",
+  "license": "MIT",
+  "devDependencies": {
+    "@snowpack/plugin-postcss": "^1.2.1",
+    "postcss": "^8.2.8",
+    "snowpack": "^3.1.2"
+  }
+}
