@@ -1,9 +1,26 @@
 plugins {
-    id "com.github.node-gradle.node" version "3.0.1"
+  id "com.github.node-gradle.node" version "3.0.1"
 }
 
 node {
-    // current LTS release
-    version = "14.16.0"
-    download = true
+  // current LTS release
+  version = "14.16.0"
+  download = true
+}
+
+// build css and put it into resources directory
+task build(type: NpxTask) {
+  dependsOn npmInstall
+  command = './node_modules/.bin/snowpack'
+  args = ['build']
+  onlyIf {
+    File destFile = file("$projectDir/build/src/project.css")
+    File sourceFile = file("$projectDir/src/project.css")
+
+    if (!destFile.exists()) {
+      return true
+    }
+
+    return sourceFile.lastModified() > destFile.lastModified()
+  }
 }
