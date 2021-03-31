@@ -38,6 +38,6 @@ test {
 task copyCssFile(type: Copy) {
   dependsOn ':css:build'
   from 'css/build/src/project.css'
-  into 'build/resources/css'
+  into 'build/resources/main/static/css'
 }
 compileJava.dependsOn 'copyCssFile'
