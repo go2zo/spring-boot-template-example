@@ -19,6 +19,6 @@ public class UserController {
     @GetMapping
     public String getUserList(Model model) {
         model.addAttribute("users", userService.getUserList().orElse(Collections.emptyList()));
-        return "/users/list";
+        return "users/list";
     }
 }

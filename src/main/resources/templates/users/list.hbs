@@ -1,12 +1,8 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <title>Mustache template tutorial</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
-<div id="container">
+{{#partial "header"}}
     <h1 class="my-title">Mustache template tutorial by JSONReplaceholder</h1>
+{{/partial}}
+
+{{#partial "content"}}
     <div id="content-pane">
         <table>
             <thead>
@@ -31,7 +27,10 @@
             </tbody>
         </table>
     </div>
-</div>
+{{/partial}}
+
+{{#partial "scripts"}}
 <link rel="stylesheet" href="/css/project.css" />
-</body>
-</html>
+{{/partial}}
+
+{{> layout/base}}
