@@ -10,8 +10,8 @@ node {
 
 // build css and put it into resources directory
 task build(type: NpxTask) {
-  dependsOn npmInstall
-  command = './node_modules/.bin/snowpack'
+  dependsOn yarn
+  command = 'snowpack'
   args = ['build']
   onlyIf {
     File destFile = file("$projectDir/build/src/project.css")
@@ -23,4 +23,8 @@ task build(type: NpxTask) {
 
     return sourceFile.lastModified() > destFile.lastModified()
   }
+}
+
+task clean(type: Delete) {
+  delete "$projectDir/build"
 }
