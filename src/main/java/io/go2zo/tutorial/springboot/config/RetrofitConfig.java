@@ -1,6 +1,6 @@
-package io.go2zo.tutorial.springbootmustache.config;
+package io.go2zo.tutorial.springboot.config;
 
-import io.go2zo.tutorial.springbootmustache.api.UserAPI;
+import io.go2zo.tutorial.springboot.api.UserAPI;
 import okhttp3.OkHttpClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

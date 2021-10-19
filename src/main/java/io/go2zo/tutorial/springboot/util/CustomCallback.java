@@ -1,4 +1,4 @@
-package io.go2zo.tutorial.springbootmustache.util;
+package io.go2zo.tutorial.springboot.util;
 
 import lombok.extern.slf4j.Slf4j;
 import retrofit2.Call;

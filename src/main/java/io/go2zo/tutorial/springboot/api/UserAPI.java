@@ -1,6 +1,6 @@
-package io.go2zo.tutorial.springbootmustache.api;
+package io.go2zo.tutorial.springboot.api;
 
-import io.go2zo.tutorial.springbootmustache.domain.User;
+import io.go2zo.tutorial.springboot.domain.User;
 import retrofit2.Call;
 import retrofit2.http.GET;
 

@@ -1,10 +1,10 @@
-package io.go2zo.tutorial.springbootmustache;
+package io.go2zo.tutorial.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootMustacheApplicationTests {
+class SpringBootTemplatesApplicationTests {
 
     @Test
     void contextLoads() {

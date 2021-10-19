@@ -1,4 +1,4 @@
-package io.go2zo.tutorial.springbootmustache.domain;
+package io.go2zo.tutorial.springboot.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

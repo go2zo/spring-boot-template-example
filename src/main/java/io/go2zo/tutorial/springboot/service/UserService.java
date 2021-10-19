@@ -1,12 +1,11 @@
-package io.go2zo.tutorial.springbootmustache.service;
+package io.go2zo.tutorial.springboot.service;
 
-import io.go2zo.tutorial.springbootmustache.api.UserAPI;
-import io.go2zo.tutorial.springbootmustache.domain.User;
-import io.go2zo.tutorial.springbootmustache.util.RequestUtil;
+import io.go2zo.tutorial.springboot.api.UserAPI;
+import io.go2zo.tutorial.springboot.domain.User;
+import io.go2zo.tutorial.springboot.util.RequestUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.Optional;
 

@@ -1,6 +1,6 @@
-package io.go2zo.tutorial.springbootmustache.controller;
+package io.go2zo.tutorial.springboot.controller;
 
-import io.go2zo.tutorial.springbootmustache.service.UserService;
+import io.go2zo.tutorial.springboot.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
