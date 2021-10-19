@@ -6,18 +6,12 @@
 </head>
 <body>
 <div id="app">
-    {{#block "header"}}
-    <h1>Title</h1>
-    {{/block}}
+    {{> components/header}}
 
     {{#block "content"}}
     {{/block}}
 
-    {{#block "footer"}}
-    <div class="footer">
-        <span>Powered by Handlebars.java</span>
-    </div>
-    {{/block}}
+    {{> components/footer}}
 </div>
 {{#block "scripts"}}
 {{/block}}
