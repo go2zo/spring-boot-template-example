@@ -1,2 +1,2 @@
-handlebars.suffix: '.html'
-handlebars.cache: false
+pebble.suffix: .html
+pebble.cache: false

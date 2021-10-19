@@ -1,4 +1,6 @@
-{{#partial "content"}}
+{% extends "layouts/base" %}
+
+{% block content %}
     <h1 class="my-title">Mustache template tutorial by JSONReplaceholder</h1>
     <div id="content-pane">
         <table>
@@ -12,22 +14,20 @@
             </tr>
             </thead>
             <tbody>
-            {{#users}}
+            {% for user in users %}
             <tr>
-                <td>{{name}}</td>
-                <td>{{username}}</td>
-                <td>{{email}}</td>
-                <td>{{phone}}</td>
-                <td><a href="{{website}}">{{website}}</a></td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phone }}</td>
+                <td><a href="{{ user.website }}">{{ user.website }}</a></td>
             </tr>
-            {{/users}}
+            {% endfor %}
             </tbody>
         </table>
     </div>
-{{/partial}}
+{% endblock %}
 
-{{#partial "scripts"}}
+{% block scripts %}
 <link rel="stylesheet" href="/css/project.css" />
-{{/partial}}
-
-{{> layouts/base}}
+{% endblock %}

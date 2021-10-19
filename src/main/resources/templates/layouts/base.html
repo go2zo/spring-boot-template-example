@@ -6,14 +6,14 @@
 </head>
 <body>
 <div id="app">
-    {{> fragments/header}}
+    {% include "fragments/header" %}
 
-    {{#block "content"}}
-    {{/block}}
+    {% block content %}
+    {% endblock %}
 
-    {{> fragments/footer}}
+    {% include "fragments/footer" %}
 </div>
-{{#block "scripts"}}
-{{/block}}
+{% block scripts %}
+{% endblock %}
 </body>
 </html>
